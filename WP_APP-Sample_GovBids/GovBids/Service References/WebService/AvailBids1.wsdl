@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetBids">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBidsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBidsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBidIds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBidIdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBidIdsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategories">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoriesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgencies">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAgenciesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAgenciesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLocations">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLocationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLocationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBidsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBids" />
+  </wsdl:message>
+  <wsdl:message name="GetBidsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBidsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBidIdsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBidIds" />
+  </wsdl:message>
+  <wsdl:message name="GetBidIdsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBidIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgenciesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgencies" />
+  </wsdl:message>
+  <wsdl:message name="GetAgenciesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLocations" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBidsHttpGetIn">
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+    <wsdl:part name="location" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidIdsHttpGetIn">
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+    <wsdl:part name="location" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidIdsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesHttpGetIn" />
+  <wsdl:message name="GetCategoriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAgenciesHttpGetIn" />
+  <wsdl:message name="GetAgenciesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationsHttpGetIn" />
+  <wsdl:message name="GetLocationsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidsHttpPostIn">
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+    <wsdl:part name="location" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidIdsHttpPostIn">
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+    <wsdl:part name="location" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBidIdsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesHttpPostIn" />
+  <wsdl:message name="GetCategoriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAgenciesHttpPostIn" />
+  <wsdl:message name="GetAgenciesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationsHttpPostIn" />
+  <wsdl:message name="GetLocationsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="AvailBidsSoap">
+    <wsdl:operation name="GetBids">
+      <wsdl:input message="tns:GetBidsSoapIn" />
+      <wsdl:output message="tns:GetBidsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <wsdl:input message="tns:GetBidIdsSoapIn" />
+      <wsdl:output message="tns:GetBidIdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesSoapIn" />
+      <wsdl:output message="tns:GetCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <wsdl:input message="tns:GetAgenciesSoapIn" />
+      <wsdl:output message="tns:GetAgenciesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input message="tns:GetLocationsSoapIn" />
+      <wsdl:output message="tns:GetLocationsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AvailBidsHttpGet">
+    <wsdl:operation name="GetBids">
+      <wsdl:input message="tns:GetBidsHttpGetIn" />
+      <wsdl:output message="tns:GetBidsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <wsdl:input message="tns:GetBidIdsHttpGetIn" />
+      <wsdl:output message="tns:GetBidIdsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesHttpGetIn" />
+      <wsdl:output message="tns:GetCategoriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <wsdl:input message="tns:GetAgenciesHttpGetIn" />
+      <wsdl:output message="tns:GetAgenciesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input message="tns:GetLocationsHttpGetIn" />
+      <wsdl:output message="tns:GetLocationsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AvailBidsHttpPost">
+    <wsdl:operation name="GetBids">
+      <wsdl:input message="tns:GetBidsHttpPostIn" />
+      <wsdl:output message="tns:GetBidsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <wsdl:input message="tns:GetBidIdsHttpPostIn" />
+      <wsdl:output message="tns:GetBidIdsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesHttpPostIn" />
+      <wsdl:output message="tns:GetCategoriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <wsdl:input message="tns:GetAgenciesHttpPostIn" />
+      <wsdl:output message="tns:GetAgenciesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input message="tns:GetLocationsHttpPostIn" />
+      <wsdl:output message="tns:GetLocationsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AvailBidsSoap" type="tns:AvailBidsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBids">
+      <soap:operation soapAction="http://tempuri.org/GetBids" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <soap:operation soapAction="http://tempuri.org/GetBidIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tempuri.org/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <soap:operation soapAction="http://tempuri.org/GetAgencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <soap:operation soapAction="http://tempuri.org/GetLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AvailBidsSoap12" type="tns:AvailBidsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBids">
+      <soap12:operation soapAction="http://tempuri.org/GetBids" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <soap12:operation soapAction="http://tempuri.org/GetBidIds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap12:operation soapAction="http://tempuri.org/GetCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <soap12:operation soapAction="http://tempuri.org/GetAgencies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <soap12:operation soapAction="http://tempuri.org/GetLocations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AvailBidsHttpGet" type="tns:AvailBidsHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetBids">
+      <http:operation location="/GetBids" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <http:operation location="/GetBidIds" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <http:operation location="/GetCategories" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <http:operation location="/GetAgencies" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <http:operation location="/GetLocations" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AvailBidsHttpPost" type="tns:AvailBidsHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetBids">
+      <http:operation location="/GetBids" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBidIds">
+      <http:operation location="/GetBidIds" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <http:operation location="/GetCategories" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgencies">
+      <http:operation location="/GetAgencies" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <http:operation location="/GetLocations" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AvailBids">
+    <wsdl:port name="AvailBidsSoap" binding="tns:AvailBidsSoap">
+      <soap:address location="http://appsweb.cloudapp.net/GovBids/AvailBids.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AvailBidsSoap12" binding="tns:AvailBidsSoap12">
+      <soap12:address location="http://appsweb.cloudapp.net/GovBids/AvailBids.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AvailBidsHttpGet" binding="tns:AvailBidsHttpGet">
+      <http:address location="http://appsweb.cloudapp.net/GovBids/AvailBids.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AvailBidsHttpPost" binding="tns:AvailBidsHttpPost">
+      <http:address location="http://appsweb.cloudapp.net/GovBids/AvailBids.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
