@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="AvailBids.asmx.cs" Class="GovBids.AvailBids" %>
