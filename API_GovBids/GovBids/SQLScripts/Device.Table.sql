@@ -1,0 +1,28 @@
+/****** Object:  Table [dbo].[Device]    Script Date: 6/6/2013 4:27:14 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Device]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Device](
+	[DeviceID] [int] NOT NULL,
+	[DeviceToken] [varchar](250) NOT NULL,
+	[DeviceType] [varchar](50) NULL,
+ CONSTRAINT [PK_Device] PRIMARY KEY CLUSTERED 
+(
+	[DeviceID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

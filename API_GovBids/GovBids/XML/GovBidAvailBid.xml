@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AvailBidResponse>
+  <AvailBids>
+    <Bid>
+      <ID>value</ID>
+      <ItemID>value</ItemID>
+      <Title>value</Title>
+      <Category>value</Category>
+      <Agency>value</Agency>
+      <Location>value</Location>
+      <DatePosted>value</DatePosted>
+      <DateOpened>value</DateOpened>
+      <PreBidDate>value</PreBidDate>
+      <SpecificationsDate>value</SpecificationsDate>
+    </Bid>
+    <Bid>
+      <ID>value</ID>
+      <ItemID>value</ItemID>
+      <Title>value</Title>
+      <Category>value</Category>
+      <Agency>value</Agency>
+      <Location>value</Location>
+      <DatePosted>value</DatePosted>
+      <DateOpened>value</DateOpened>
+      <PreBidDate>value</PreBidDate>
+      <SpecificationsDate>value</SpecificationsDate>
+    </Bid>
+  </AvailBids>
+</AvailBidResponse>
